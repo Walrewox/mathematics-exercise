@@ -18,13 +18,16 @@ while i < attempts:
     elif(option == 3):
         question = first*second
         answer = int(input(f"{first} * {second} = "))
-    else:
+    elif(option == 4):
         try:
             question = first/second
             answer = int(input(f"{first} / {second} = "))
         except ZeroDivisionError:
             question = first/1
             answer = int(input(f"{first} / 1 = "))
+    else:
+        print("Дія обрана неправильно, почніть спочатку!")
+        break
     if (question == answer):
         correct += 1
     i += 1
